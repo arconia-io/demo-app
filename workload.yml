@@ -1,0 +1,14 @@
+---
+apiVersion: app.kadras.io/v1alpha1
+kind: Workload
+metadata:
+  name: demo-app
+  labels:
+    app: demo-app
+spec:
+  image: ghcr.io/arconia-io/demo-app
+  application:
+    framework: spring-boot
+    language: java
+  serviceClaims:
+    - name: postgresql
